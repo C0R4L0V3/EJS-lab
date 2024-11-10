@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+  <h1>Full Menu</h1>
+
+  <%- include('./partials/nav')%>
+
+  <ul>
+    <% menuItems.forEach((item, index) => { %> <!-- This should pull the menu varaible and run it through a for each loop-->
+        <!--ternary chain to div up items, should work i think?-->
+
+        <li><%= item.name %>: <%= item.price %> <%= item.rating %> <%= item.details %></li>
+
+    <% }); %>
+  </ul>
+
+</body>
+</html>
